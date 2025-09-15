@@ -20,3 +20,18 @@ let state  // This is undefined as variable has been declared but no value has b
 
 console.log(typeof null); //object
 console.log(typeof undefined); //undefined
+
+const accId=122345
+let accEmail="abc@c.com"
+var accPass=12345
+let accState; //this is undefined as no value is given to this
+//var is not used nowadays because of issue in block scope and functional scope
+
+// accCity="Kolkata" //this is undefined 
+
+// accId= 2 //not allowed
+
+accEmail="db@nm,com"
+
+console.log(accId);
+console.table([accEmail,accPass,accId,accState]);
