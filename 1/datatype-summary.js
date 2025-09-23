@@ -33,3 +33,10 @@ const myFunction = function(){
 }
 
 console.log(typeof anotherId);
+
+// *********Memory Allocation**********
+
+//Stack(Primitive)--> a copy of the original value is sent while working in this memory. 
+                    //No changes in the original
+
+//Heap(Non-Primitive)--> a reference to the original is sent in this memory.
