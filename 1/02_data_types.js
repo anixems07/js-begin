@@ -25,9 +25,9 @@ const accId=122345
 let accEmail="abc@c.com"
 var accPass=12345
 let accState; //this is undefined as no value is given to this
-//var is not used nowadays because of issue in block scope and functional scope
+//var is not used nowadays because of issue in block scope("{}>") and functional scope
 
-// accCity="Kolkata" //this is undefined 
+//  accCity="Kolkata" //this is undefined 
 
 // accId= 2 //not allowed
 
