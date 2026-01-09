@@ -19,3 +19,9 @@ const url="https://aniket.com/anixems%20profile";
 console.log(url.replace('%20','-')); //https://aniket.com/anixems-profile
 
 console.log(url.includes('aniket')); //true
+
+console.log(url.italics());
+
+console.log(gameName.slice(-5,4));//ic --> negative length is total length - given negative index; here it is 7-5=2 to 4 index.
+
+
