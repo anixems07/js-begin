@@ -34,10 +34,25 @@ const user=[
 ]
 
 user[1].userId;
-console.log(InstaUser);
+// console.log(InstaUser);
 
-console.log(Object.keys(InstaUser)); //[ 'name', 'id', 'LoggedIn' ]-->array of keys
-console.log(Object.values(InstaUser)); //[ 'John', 'john_123', false ]-->array of values
-console.log(Object.entries(InstaUser)); // [ [ 'name', 'John' ], [ 'id', 'john_123' ], [ 'LoggedIn', false ] ]-->array of key value pairs
+// console.log(Object.keys(InstaUser)); //[ 'name', 'id', 'LoggedIn' ]-->array of keys
+// console.log(Object.values(InstaUser)); //[ 'John', 'john_123', false ]-->array of values
+// console.log(Object.entries(InstaUser)); // [ [ 'name', 'John' ], [ 'id', 'john_123' ], [ 'LoggedIn', false ] ]-->array of key value pairs
 
 console.log(InstaUser.hasOwnProperty("LoggedIn")); //true
+
+// ******Destructuring object********
+
+const course={
+    launguage:"JavaScript",
+    price:999,
+    duration:"3 months"
+}
+// const {property: new_property_name} = object_name
+// const {duration} = course
+// console.log(duration);
+const {duration: course_duration} = course
+console.log(course_duration);
+
+
