@@ -13,9 +13,9 @@ const coding=["js","cpp","python","ruby","bash"]
 // }
 // coding.forEach(printMe); //here the reference of printMe is passed
 
-// coding.forEach( (item, index, arr)=> {
-//     console.log(item,index, arr); // prints item with their index and also the whole array for each element everytime 
-// })
+coding.forEach( (item, index,arr,) => {     //forEach(callback(currentValue, index, array))
+    console.log(item,index,arr); // prints item with their index and also the whole array for each element everytime 
+})
 
 const myCoding= [
     {
