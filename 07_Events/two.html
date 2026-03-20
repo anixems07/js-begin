@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JAVASCRIPT</h2>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeout(function(){
+    //     console.log("Aniket");
+    // },2000) //Prints Aniket after 2 secs
+
+    const sayAniket = function(){
+        console.log("Aniket");
+    }
+    const changeText= function(){
+        document.querySelector('h2').innerHTML= "JS Series"
+    }
+
+    const chnageMe= setTimeout(changeText, 2000)
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(chnageMe)
+        console.log("Stopped!")    
+    })
+    
+</script>
+</html>
