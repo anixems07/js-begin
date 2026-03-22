@@ -38,3 +38,6 @@ console.log(userOne.constructor);
 // If 'new' keyword is not used then userTwo value overwrite the value of the userOne and if new kwyword is used then new instance of the function is made or a new copy of the function is made hence it does not affect each other.
 // new always returns 'this' even if return this is not written then also
 // # instanceof operator #
+
+//In browser this keyword refers to window Object; window = {this = window}
+//In node environment this keywords refers to empty Object; node = {}
