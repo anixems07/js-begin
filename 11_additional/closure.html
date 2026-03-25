@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+    // function init() {
+    //     let name = "Mozilla"; 
+    //     function displayName(){ //displayName() is the inner function, that forms the closure
+    //         console.log(name);  
+    //     }
+    //     displayName();
+    // }
+    // init();
+
+//Lexical scoping
+
+    function outer() {
+        let username = "javascript"
+        function inner() {
+            console.log("inner", username);
+        }
+        inner()
+    }
+    outer()
+
+//Closure
+
+// function makeFunc() {
+//     const name = "Mozilla";
+//     function displayName() {
+//         console.log(name);
+//     }
+//     return displayName;
+// }
+
+// const myFunc = makeFunc()
+// myFunc();
+
+
+
+</script>
+<script>
+    // document.getElementById('orange').onclick= function(){
+    //     document.body.style.backgroundColor = `orange`
+    // }
+    // document.getElementById('green').onclick= function(){
+    //     document.body.style.backgroundColor = `green`
+    // }
+    
+    //practical use of closures
+    
+    function clickHandler(color) {
+        // document.body.style.backgroundColor = `${color}`  // this caused the automatic change in color without even clicking the button
+        return function() {
+            document.body.style.backgroundColor=`${color}`
+        }
+    }
+    
+    // document.getElementById('orange').onclick = clickHandler("orange") //this exexcuted and then was assigned so it set the color even before clicking
+
+    document.getElementById('orange').onclick = clickHandler("orange")
+    document.getElementById('green ').onclick = clickHandler("green")
+</script>
+</html>
