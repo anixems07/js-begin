@@ -1,6 +1,6 @@
 class User{
     constructor(email, password) {
-        this.email=email
+        this.email=email //setter method triggers here
         this.password=password
     }
 
@@ -8,7 +8,10 @@ class User{
         return this._email.toUpperCase()
     }
 
+// Here email is just a controlled interface, _email is the actual storage
+
     set email(value){
+        // this.email= value  //Setter calls itself → crash (stack overflow)
         this._email = value
     }
 
