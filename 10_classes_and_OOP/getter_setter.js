@@ -12,7 +12,7 @@ class User{
 
     set email(value){
         // this.email= value  //Setter calls itself → crash (stack overflow)
-        this._email = value
+        this._email = value  //_email is a private property
     }
 
     get password(){
