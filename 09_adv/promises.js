@@ -1,4 +1,4 @@
-const promiseOne = new Promise(function(resolve, reject){ //ptomise function canhave only two parts function(resolve, reject)
+const promiseOne = new Promise(function(resolve, reject){ //promise function can have only two parts function(resolve, reject)
     // Do an assync task
     // DB calls, cryptography, network
     // Promise is an OBJECT
@@ -6,17 +6,17 @@ const promiseOne = new Promise(function(resolve, reject){ //ptomise function can
         console.log('Assyn Task is complete');  
         resolve() 
     },1000)
-})
+}) //created a promise
 
 promiseOne.then(function(){
     console.log("Promise Consumed");
-})
+})  // consumed a promise
 
 
 new Promise(function(resolve, reject){
     setTimeout(function(){
         console.log("Assync Task 2");
-        resolve();
+        resolve(); //calling resolve() method is used to connect the promise to the .then()
     },1000)
 }).then(function(){
     console.log("Task 2 is complete");
@@ -71,14 +71,14 @@ async function consumePromiseFive(){
    } catch (error) {
     console.log(error); 
    }
-}
+} //consuming the promise using assyc await
 
 consumePromiseFive()
 
 async function getAllUsers() {
     try {
-        const response = await fetch('https://api.github.com/users/anixems07');
-        const data = await response.json()
+        const response = await fetch('https://api.github.com/users/anixems07'); //fetch object will return a Promise
+        const data = await response.json() //converts string into json format also takes time so "await" is used
         console.log(data);
     } catch (error) {
         console.log("Problem: ", error); 
